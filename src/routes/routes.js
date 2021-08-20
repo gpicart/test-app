@@ -5,6 +5,8 @@ const history = createBrowserHistory();
 const routeNaming = {
   HOME: 'home',
   NOT_FOUND: 'notFound',
+  RICK_AND_MORTY: 'rickAndMorty',
+  RICK_AND_MORTY_FORM: 'rickAndMortyForm',
 };
 
 const PATH_PARAM_REGEX = /:[^/]+/gi;
@@ -35,6 +37,16 @@ const routes = [
   {
     name: routeNaming.HOME,
     path: '/',
+    exact: true,
+  },
+  {
+    name: routeNaming.RICK_AND_MORTY,
+    path: '/rick-and-morty',
+    exact: true,
+  },
+  {
+    name: routeNaming.RICK_AND_MORTY_FORM,
+    path: '/rick-and-morty-form',
     exact: true,
   },
   {
